@@ -58,7 +58,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="SAH-eL-Q1e">
                             <connections>
-                                <segue destination="bZs-fr-UmS" kind="show" identifier="GoToSeach" id="u16-Hw-Ls4"/>
+                                <segue destination="bZs-fr-UmS" kind="show" identifier="GoToSearch" id="u16-Hw-Ls4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -266,10 +266,10 @@
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="1013.8392857142857"/>
         </scene>
-        <!--Seach Table Controller-->
+        <!--Search Table Controller-->
         <scene sceneID="mNu-Is-GsR">
             <objects>
-                <tableViewController id="bZs-fr-UmS" customClass="SeachTableController" customModule="GitFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bZs-fr-UmS" customClass="SearchTableController" customModule="GitFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2nL-em-w3F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

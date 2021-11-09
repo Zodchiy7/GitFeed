@@ -10,9 +10,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class Model {
+final class Model {
   
     static let shared = Model()
+    private init() { }
     
     var events = BehaviorRelay<[Event]>(value: [])
     var user = BehaviorRelay<User>(value: User())

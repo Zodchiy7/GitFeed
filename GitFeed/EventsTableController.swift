@@ -36,6 +36,7 @@ class EventsTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = gitServices.repoName
+        view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         
         //Setup the Serch Controller
         searchController.searchResultsUpdater = self
@@ -48,7 +49,7 @@ class EventsTableController: UITableViewController {
         let refreshControl = self.refreshControl!
 
         refreshControl.backgroundColor = UIColor(white: 0.98, alpha: 1.0)
-        refreshControl.tintColor = UIColor.darkGray
+        refreshControl.tintColor = UIColor.black
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
@@ -117,7 +118,7 @@ class EventsTableController: UITableViewController {
 extension EventsTableController: SegueHandler {
     enum SegueIdentifier: String {
         case GoToUserDetail
-        case GoToSeach
+        case GoToSearch
     }
 
     // MARK: - Navigation
@@ -131,8 +132,8 @@ extension EventsTableController: SegueHandler {
                 return
             }
             userDetailController.selectedEvent = self.selectedEvent
-        case.GoToSeach:
-            guard let _ = segue.destination as? SeachTableController else {
+        case.GoToSearch:
+            guard let _ = segue.destination as? SearchTableController else {
                 assertionFailure("Couldn't get User Detail is coming VC!")
                 return
             }
